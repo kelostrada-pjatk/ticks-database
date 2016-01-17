@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+        <h1><%= title %></h1>
+        <p>Welcome to <%= title %></p>
+        <form method="post">
+            <table>
+                <tr>
+                    <td class="name">Symbol</td>
+                    <td><input type="text" name="symbol" value=""/></td>
+                </tr>
+                <tr>
+                    <td class="name">Timestamp</td>
+                    <td><input type="text" name="timestamp" value=""/></td>
+                </tr>
+                <tr>
+                    <td class="name">Bid</td>
+                    <td><input type="text" name="bid" value=""/></td>
+                </tr>
+                <tr>
+                    <td class="name">Ask</td>
+                    <td><input type="text" name="ask" value=""/></td>
+                </tr>
+                <tr>
+                    <td class="name">Volume</td>
+                    <td><input type="text" name="volume" value=""/></td>
+                </tr>
+            </table>
+            <input type="submit" />
+        </form>
+        <p>
+            <a href="/ticks/">Back</a>
+        </p>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <p>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Symbol</th>
+                <th>Timestamp</th>
+                <th>Bid</th>
+                <th>Ask</th>
+                <th>Volume</th>
+                <th>Options</th>
+            </tr>
+            <% ticks.forEach(function(tick) { %>
+                <tr>
+                    <td><%= tick.id %></td>
+                    <td><%= tick.symbol %></td>
+                    <td><%= tick.timestamp %></td>
+                    <td><%= tick.bid %></td>
+                    <td><%= tick.ask %></td>
+                    <td><%= tick.volume %></td>
+                    <td><a href="/ticks/<%= tick.id %>">View</a> | <a href="/ticks/edit/<%= tick.id %>">Edit</a> | <a href="/ticks/delete/<%= tick.id %>">Delete</a></td>
+                </tr>
+            <% }); %>
+        </table>
+    </p>
+    <p>
+        <a href="/ticks/create">Create new tick</a>
+    </p>
+  </body>
+</html>

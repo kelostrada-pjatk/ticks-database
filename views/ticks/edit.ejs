@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+        <h1><%= title %></h1>
+        <p>Welcome to <%= title %></p>
+        <form method="post">
+            <table>
+                <tr>
+                    <td class="name">ID</td>
+                    <td><input type="text" name="id" value="<%= tick.id %>"/></td>
+                </tr>
+                <tr>
+                    <td class="name">Symbol</td>
+                    <td><input type="text" name="symbol" value="<%= tick.symbol %>"/></td>
+                </tr>
+                <tr>
+                    <td class="name">Timestamp</td>
+                    <td><input type="text" name="timestamp" value="<%= tick.timestamp %>"/></td>
+                </tr>
+                <tr>
+                    <td class="name">Bid</td>
+                    <td><input type="text" name="bid" value="<%= tick.bid %>"/></td>
+                </tr>
+                <tr>
+                    <td class="name">Ask</td>
+                    <td><input type="text" name="ask" value="<%= tick.ask %>"/></td>
+                </tr>
+                <tr>
+                    <td class="name">Volume</td>
+                    <td><input type="text" name="volume" value="<%= tick.volume %>"/></td>
+                </tr>
+            </table>
+            <input type="submit" />
+        </form>
+        <p>
+            <a href="/ticks/delete/<%= tick.id %>">Delete</a> | <a href="/ticks/edit/<%= tick.id %>">Edit</a> | <a href="/ticks/">Back</a>
+        </p>
+  </body>
+</html>
